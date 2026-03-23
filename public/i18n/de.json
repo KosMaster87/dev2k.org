@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "Konstantin Aksenov",
+    "role": "Software Developer",
+    "cta": "Mehr erfahren"
+  },
+  "about": {
+    "title": "Über mich",
+    "intro": "Leidenschaftlicher Software-Entwickler mit Fokus auf Angular, TypeScript und moderne Web-Technologien."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "projects": {
+    "title": "Projekte",
+    "viewCode": "Code ansehen",
+    "viewLive": "Live Demo"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "message": "Interesse an einer Zusammenarbeit? Schreib mir!",
+    "namePlaceholder": "Dein Name",
+    "emailPlaceholder": "Deine E-Mail",
+    "messagePlaceholder": "Deine Nachricht",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "successTitle": "Nachricht gesendet!",
+    "successMessage": "Danke für deine Nachricht. Ich melde mich bald.",
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "auto": "System",
+    "toggle": "Theme wechseln"
+  },
+  "lang": {
+    "de": "Deutsch",
+    "en": "English",
+    "switch": "Sprache wechseln"
+  }
+}
