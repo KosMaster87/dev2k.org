@@ -51,3 +51,6 @@ Thumbs.db
 
 # Build artifacts
 *.tsbuildinfo
+
+# GitHub/AI/Copilot Konfiguration
+.github/
