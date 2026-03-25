@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="header__container">
+    <a class="header__logo" (click)="scrollToTop()" role="link">dev2k</a>
+
+    <nav class="header__nav" [class.header__nav--open]="isMenuOpen()" aria-label="Main navigation">
+      <ul class="header__nav-list">
+        @for (item of navItems; track item.fragment) {
+          <li class="header__nav-item">
+            <button class="header__nav-link" (click)="scrollTo(item.fragment)">
+              {{ translate(item.key) }}
+            </button>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header__controls">
+      <button class="header__lang-btn" (click)="toggleLang()" aria-label="Switch language">
+        {{ currentLang() === 'de' ? 'EN' : 'DE' }}
+      </button>
+
+      <button class="header__theme-btn" (click)="toggleTheme()" aria-label="Toggle theme">
+        {{ activeTheme() === 'dark' ? '☀' : '☾' }}
+      </button>
+    </div>
+
+    <button
+      class="header__hamburger"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="header__hamburger-line"></span>
+      <span class="header__hamburger-line"></span>
+      <span class="header__hamburger-line"></span>
+    </button>
+  </div>
+</header>

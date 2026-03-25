@@ -1,0 +1,24 @@
+.privacy {
+  min-height: 100vh;
+  padding: var(--spacing-xl) var(--spacing-md);
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__back {
+    display: inline-block;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-lg);
+  }
+}

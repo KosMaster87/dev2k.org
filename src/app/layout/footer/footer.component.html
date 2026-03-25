@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="footer__container">
+    <p class="footer__copyright">
+      &copy; {{ currentYear }} dev2k &mdash; {{ translate('footer.rights') }}
+    </p>
+
+    <nav class="footer__links" aria-label="Legal links">
+      <a class="footer__link footer__link--imprint" href="/imprint">
+        {{ translate('footer.imprint') }}
+      </a>
+      <a class="footer__link footer__link--privacy" href="/privacy">
+        {{ translate('footer.privacy') }}
+      </a>
+    </nav>
+
+    <button class="footer__back-to-top" (click)="scrollToTop()" aria-label="Back to top">↑</button>
+  </div>
+</footer>

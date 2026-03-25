@@ -1,11 +1,15 @@
+/**
+ * @fileoverview PrivacyComponent unit tests
+ * @description Tests for the /datenschutz legal page
+ */
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { App } from './app';
+import { PrivacyComponent } from './privacy.component';
 
-describe('App', () => {
+describe('PrivacyComponent', () => {
   beforeEach(async () => {
     Object.defineProperty(window, 'matchMedia', {
       writable: true,
@@ -18,28 +22,27 @@ describe('App', () => {
     });
 
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [PrivacyComponent],
       providers: [provideRouter([]), provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should be created', () => {
+    const fixture = TestBed.createComponent(PrivacyComponent);
+    expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('should render header', () => {
-    const fixture = TestBed.createComponent(App);
+  it('should render a heading', () => {
+    const fixture = TestBed.createComponent(PrivacyComponent);
     fixture.detectChanges();
-    const header = fixture.nativeElement.querySelector('app-header');
-    expect(header).toBeTruthy();
+    const h1 = fixture.nativeElement.querySelector('h1');
+    expect(h1).toBeTruthy();
   });
 
-  it('should render footer', () => {
-    const fixture = TestBed.createComponent(App);
+  it('should render a back-link to home', () => {
+    const fixture = TestBed.createComponent(PrivacyComponent);
     fixture.detectChanges();
-    const footer = fixture.nativeElement.querySelector('app-footer');
-    expect(footer).toBeTruthy();
+    const link = fixture.nativeElement.querySelector('a[routerLink="/"]');
+    expect(link).toBeTruthy();
   });
 });
